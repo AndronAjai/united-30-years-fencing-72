@@ -213,13 +213,15 @@ const Projects = () => {
                   <div>
                     <h3 className="font-semibold text-lg text-primary mb-2">{project.name}</h3>
                     <p className="text-sm text-muted-foreground mb-3">{project.location}</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
-                  </div>
-                  
-                  <div className="pt-4 border-t border-border">
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="text-muted-foreground">Project Year</span>
-                      <span className="font-medium text-primary">{project.year}</span>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">{project.description}</p>
+                    
+                    <div className="flex items-center justify-between">
+                      <Badge variant="outline" className="text-xs">
+                        {project.year}
+                      </Badge>
+                      <Button variant="outline" size="sm" className="text-xs h-7">
+                        View Details
+                      </Button>
                     </div>
                   </div>
                 </div>

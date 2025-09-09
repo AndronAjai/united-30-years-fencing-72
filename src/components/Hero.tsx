@@ -48,7 +48,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-gold rounded-full"></div>
-                <span>Forest Department Approved</span>
+                <span>Wildlife Conservation Partner</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-gold rounded-full"></div>
