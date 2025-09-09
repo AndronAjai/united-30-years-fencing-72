@@ -34,20 +34,39 @@ const Index = () => {
       
       <footer className="bg-forest-dark text-white py-12">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-2xl font-bold mb-4">United Fence Systems</h3>
               <p className="text-white/80 text-sm mb-4">
                 30 years of excellence in electric fencing solutions. 
-                Protecting wildlife and securing properties across South India.
+                Protecting wildlife and securing properties across South India and other states as needed.
               </p>
               <div className="space-y-1 text-xs text-white/70">
-                <p>KAROTTUKUNNEL Building, 12/355</p>
+                <p className="font-medium text-white/90 mb-2">Business Address:</p>
+                <p>Ground Floor, 12/355</p>
+                <p>KAROTTUKUNNEL Building</p>
                 <p>Velliyamattom, Thodupuzha</p>
                 <p>Idukki - 685588, Kerala</p>
-                <p>GSTIN: 32AAIFU0806G1ZJ</p>
+                <p className="mt-2">GSTIN: 32AAIFU0806G1ZJ</p>
               </div>
             </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Quick Contact</h4>
+              <div className="space-y-2 text-sm text-white/80">
+                <div>
+                  <p className="font-medium text-white/90">Phone Numbers:</p>
+                  <p>+91 9447022577</p>
+                  <p>+91 8075684443</p>
+                  <p>+91 9446597577</p>
+                </div>
+                <div className="mt-3">
+                  <p className="font-medium text-white/90">Email:</p>
+                  <p>unitedfencesystems@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            
             <div>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-sm text-white/80">
@@ -57,19 +76,21 @@ const Index = () => {
                 <li>Emergency Repair Services</li>
               </ul>
             </div>
+            
             <div>
               <h4 className="font-semibold mb-4">Coverage Areas</h4>
               <ul className="space-y-2 text-sm text-white/80">
                 <li>Kerala - All Districts</li>
                 <li>Tamil Nadu - Major Areas</li>
                 <li>Karnataka - Selected Regions</li>
+                <li>Other States - On Request</li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-white/20 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-white/60">
-              © 2024 United Fence Systems. All rights reserved. Established 1996.
+              © 2024 United Fence Systems. All rights reserved. Established 1994.
             </p>
             <p className="text-sm text-white/60">
               Authorized Dealer: Fenceline Gallagher (New Zealand)

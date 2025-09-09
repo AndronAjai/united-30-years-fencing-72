@@ -164,7 +164,7 @@ const Projects = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             From protecting India's most precious wildlife sanctuaries to securing government facilities 
-            and agricultural lands, our work spans across Kerala, Tamil Nadu, and Karnataka.
+            and agricultural lands, our work spans across Kerala, Tamil Nadu, Karnataka, and other states as needed.
           </p>
         </div>
 
@@ -216,12 +216,13 @@ const Projects = () => {
                     <p className="text-sm text-muted-foreground leading-relaxed mb-4">{project.description}</p>
                     
                     <div className="flex items-center justify-between">
-                      <Badge variant="outline" className="text-xs">
-                        {project.year}
-                      </Badge>
-                      <Button variant="outline" size="sm" className="text-xs h-7">
-                        View Details
-                      </Button>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                        <span className="text-xs text-primary font-medium">Completed Successfully</span>
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        ✓ Verified
+                      </div>
                     </div>
                   </div>
                 </div>
