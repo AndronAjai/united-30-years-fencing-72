@@ -37,10 +37,16 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-2xl font-bold mb-4">United Fence Systems</h3>
-              <p className="text-white/80 text-sm">
+              <p className="text-white/80 text-sm mb-4">
                 30 years of excellence in electric fencing solutions. 
                 Protecting wildlife and securing properties across South India.
               </p>
+              <div className="space-y-1 text-xs text-white/70">
+                <p>KAROTTUKUNNEL Building, 12/355</p>
+                <p>Velliyamattom, Thodupuzha</p>
+                <p>Idukki - 685588, Kerala</p>
+                <p>GSTIN: 32AAIFU0806G1ZJ</p>
+              </div>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Services</h4>

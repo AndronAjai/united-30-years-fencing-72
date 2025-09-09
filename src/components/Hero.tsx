@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-fencing.jpg";
+import heroImage from "@/assets/hero-electric-fencing.jpg";
 
 const Hero = () => {
   return (
@@ -44,15 +44,15 @@ const Hero = () => {
             <div className="flex items-center gap-8 text-sm text-white/80">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-gold rounded-full"></div>
-                <span>Government Approved</span>
+                <span>ISO Certified Quality</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-gold rounded-full"></div>
-                <span>Wildlife Specialist</span>
+                <span>Forest Department Approved</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-gold rounded-full"></div>
-                <span>Ibex Gallagher Dealer</span>
+                <span>Gallagher Authorized Partner</span>
               </div>
             </div>
           </div>

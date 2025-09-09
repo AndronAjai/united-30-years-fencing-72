@@ -28,7 +28,7 @@ const Services = () => {
     {
       title: "Animal-Specific Design",
       description: "Fence height and line configuration based on target animals",
-      examples: ["Elephants: 8-10 lines", "Wild boars: 4-6 lines", "Monkeys: 6-8 lines", "Deer: 5-7 lines"]
+      examples: ["Elephants: 4-6 lines", "Wild boars: 4-6 lines", "Wild buffalo: 5-7 lines", "Deer: 5-7 lines"]
     },
     {
       title: "Terrain Adaptation", 

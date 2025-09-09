@@ -140,6 +140,14 @@ const Projects = () => {
         type: "Zoo Development",
         year: "2024-Ongoing",
         status: "In Progress"
+      },
+      {
+        name: "Thrissur Pattikad Forest Range",
+        location: "Pattikad, Thrissur",
+        description: "Comprehensive elephant fencing system for forest range protection",
+        type: "Forest Protection",
+        year: "2024-Ongoing",
+        status: "In Progress"
       }
     ]
   };
@@ -209,8 +217,8 @@ const Projects = () => {
                   </div>
                   
                   <div className="pt-4 border-t border-border">
-                    <div className="flex items-center justify-between text-xs text-muted-foreground">
-                      <span>Project Timeline</span>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-muted-foreground">Project Year</span>
                       <span className="font-medium text-primary">{project.year}</span>
                     </div>
                   </div>
