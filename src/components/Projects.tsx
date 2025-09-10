@@ -154,12 +154,12 @@ const Projects = () => {
 
   return (
     <section className="py-20 bg-gradient-to-b from-forest-light/20 to-background">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 text-primary border-primary">
             Our Projects
           </Badge>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
             Three Decades of <span className="text-primary">Successful Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -169,15 +169,16 @@ const Projects = () => {
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
           {categories.map((category) => (
             <Button
               key={category.id}
               variant={activeCategory === category.id ? "professional" : "outline"}
               onClick={() => setActiveCategory(category.id)}
-              className="flex items-center gap-2"
+              className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2"
             >
-              {category.name}
+              <span className="hidden sm:inline">{category.name}</span>
+              <span className="sm:hidden">{category.name.split(' ')[0]}</span>
               <Badge variant="outline" className="text-xs">
                 {category.count}
               </Badge>
@@ -186,7 +187,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {projects[activeCategory as keyof typeof projects].map((project, index) => (
             <Card key={index} className="bg-gradient-to-b from-card to-accent/30 border-border shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105">
               <CardContent className="p-6">
@@ -215,14 +216,9 @@ const Projects = () => {
                     <p className="text-sm text-muted-foreground mb-3">{project.location}</p>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-4">{project.description}</p>
                     
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-primary rounded-full"></div>
-                        <span className="text-xs text-primary font-medium">Completed Successfully</span>
-                      </div>
-                      <div className="text-xs text-muted-foreground">
-                        ✓ Verified
-                      </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <span className="text-xs text-primary font-medium">Completed Successfully</span>
                     </div>
                   </div>
                 </div>

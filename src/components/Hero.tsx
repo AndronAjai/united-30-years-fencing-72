@@ -13,44 +13,44 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center lg:text-left">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center lg:text-left">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="text-white">
             {/* Established Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-gold/20 backdrop-blur-sm border border-gold/30 rounded-full mb-6">
-              <span className="text-gold font-semibold">Est. 1996</span>
-              <span className="mx-3 text-gold/60">•</span>
+            <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-gold/20 backdrop-blur-sm border border-gold/30 rounded-full mb-4 sm:mb-6 text-sm sm:text-base">
+              <span className="text-gold font-semibold">Est. 1994</span>
+              <span className="mx-2 sm:mx-3 text-gold/60">•</span>
               <span className="text-gold font-semibold">30 Years of Excellence</span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
               <span className="block text-gold">United Fence</span>
               <span className="block">Systems</span>
             </h1>
             
-            <p className="text-xl lg:text-2xl mb-8 text-white/90 max-w-2xl">
-              India's trusted partner in electric fencing solutions. Protecting wildlife, securing properties, and safeguarding communities across Kerala, Tamil Nadu, and Karnataka.
+            <p className="text-lg sm:text-xl lg:text-2xl mb-6 sm:mb-8 text-white/90 max-w-2xl mx-auto lg:mx-0">
+              India's trusted partner in electric fencing solutions. Protecting wildlife, securing properties, and safeguarding communities across Kerala, Tamil Nadu, Karnataka, and other states as needed.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button size="lg" variant="hero" className="text-lg px-8 py-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 px-4 sm:px-0">
+              <Button size="lg" variant="hero" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
                 Get Quote Today
               </Button>
-              <Button size="lg" variant="outline-gold" className="text-lg px-8 py-4">
+              <Button size="lg" variant="outline-gold" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
                 View Our Projects
               </Button>
             </div>
             
-            <div className="flex items-center gap-8 text-sm text-white/80">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 text-xs sm:text-sm text-white/80">
+              <div className="flex items-center gap-2 justify-center lg:justify-start">
                 <div className="w-2 h-2 bg-gold rounded-full"></div>
                 <span>ISO Certified Quality</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 justify-center lg:justify-start">
                 <div className="w-2 h-2 bg-gold rounded-full"></div>
                 <span>Wildlife Conservation Partner</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 justify-center lg:justify-start">
                 <div className="w-2 h-2 bg-gold rounded-full"></div>
                 <span>Gallagher Authorized Partner</span>
               </div>
@@ -58,22 +58,22 @@ const Hero = () => {
           </div>
           
           {/* Stats */}
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
-              <div className="text-3xl font-bold text-gold mb-2">30+</div>
-              <div className="text-white/90">Years Experience</div>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6 mt-8 lg:mt-0">
+            <div className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 lg:p-6 rounded-lg border border-white/20 text-center">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gold mb-1 sm:mb-2">30+</div>
+              <div className="text-white/90 text-xs sm:text-sm lg:text-base">Years Experience</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
-              <div className="text-3xl font-bold text-gold mb-2">500+</div>
-              <div className="text-white/90">Projects Completed</div>
+            <div className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 lg:p-6 rounded-lg border border-white/20 text-center">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gold mb-1 sm:mb-2">500+</div>
+              <div className="text-white/90 text-xs sm:text-sm lg:text-base">Projects Completed</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
-              <div className="text-3xl font-bold text-gold mb-2">100%</div>
-              <div className="text-white/90">Wildlife Safe</div>
+            <div className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 lg:p-6 rounded-lg border border-white/20 text-center">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gold mb-1 sm:mb-2">100%</div>
+              <div className="text-white/90 text-xs sm:text-sm lg:text-base">Wildlife Safe</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20">
-              <div className="text-3xl font-bold text-gold mb-2">3</div>
-              <div className="text-white/90">States Covered</div>
+            <div className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 lg:p-6 rounded-lg border border-white/20 text-center">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gold mb-1 sm:mb-2">4+</div>
+              <div className="text-white/90 text-xs sm:text-sm lg:text-base">States Covered</div>
             </div>
           </div>
         </div>
