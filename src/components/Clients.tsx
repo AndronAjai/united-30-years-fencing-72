@@ -1,54 +1,55 @@
 import { Badge } from "@/components/ui/badge";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
+
+// Import logos
+import keralaGovLogo from "@/assets/logos/kerala-government.png";
+import nddbLogo from "@/assets/logos/nddb-logo.png";
+import bsnlLogo from "@/assets/logos/bsnl-logo.png";
+import kfdcLogo from "@/assets/logos/kfdc-logo.png";
+import periyarLogo from "@/assets/logos/periyar-tiger-reserve.png";
+import tnForestLogo from "@/assets/logos/tn-forest-dept.png";
 
 const Clients = () => {
+  const plugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
+  
   const clients = [
     {
       name: "Kerala State Government",
+      logo: keralaGovLogo,
       category: "Government",
       description: "Wildlife protection projects across multiple sanctuaries"
     },
     {
       name: "Kerala Forest Development Corporation",
+      logo: kfdcLogo,
       category: "Government",
       description: "Plantation protection and wildlife corridor management"
     },
     {
       name: "NDDB (National Dairy Development Board)",
+      logo: nddbLogo,
       category: "Government",
       description: "Alamadhi Semen Station security fencing"
     },
     {
       name: "BSNL",
+      logo: bsnlLogo,
       category: "Telecom",
       description: "Communication tower security across multiple states"
     },
     {
       name: "Periyar Tiger Reserve",
+      logo: periyarLogo,
       category: "Wildlife",
       description: "Complete perimeter protection system"
     },
     {
-      name: "Silent Valley National Park", 
-      category: "Wildlife",
-      description: "Wildlife corridor and boundary fencing"
-    },
-    {
-      name: "PCK Rubber Estate",
-      category: "Agricultural",
-      description: "Large-scale plantation security"
-    },
-    {
-      name: "AVT Group",
-      category: "Agricultural", 
-      description: "Premium spice plantation protection"
-    },
-    {
-      name: "Thrissur Zoo",
-      category: "Wildlife",
-      description: "Zoo expansion and animal enclosure systems"
-    },
-    {
       name: "Tamil Nadu Forest Department",
+      logo: tnForestLogo,
       category: "Government",
       description: "Wildlife protection and forest boundary security"
     }
@@ -85,44 +86,52 @@ const Clients = () => {
           </p>
         </div>
 
-        {/* Clients Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-          {clients.map((client, index) => (
-            <div 
-              key={index} 
-              className="bg-card border border-border rounded-lg p-4 sm:p-6 hover:shadow-card transition-all duration-300 hover:scale-105 text-center"
-            >
-              {/* Logo placeholder - could be replaced with actual logos */}
-              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 bg-gradient-to-br from-primary/20 to-primary/40 rounded-full flex items-center justify-center">
-                <div className="text-lg sm:text-xl font-bold text-primary">
-                  {client.name.split(' ').map(word => word[0]).join('').slice(0, 2)}
+        {/* Clients Carousel */}
+        <Carousel
+          plugins={[plugin.current]}
+          className="w-full max-w-6xl mx-auto"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {clients.map((client, index) => (
+              <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                <div className="bg-card border border-border rounded-lg p-4 sm:p-6 hover:shadow-card transition-all duration-300 hover:scale-105 text-center h-full">
+                  {/* Logo */}
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 rounded-lg overflow-hidden bg-white/50 backdrop-blur-sm flex items-center justify-center p-2">
+                    <img 
+                      src={client.logo} 
+                      alt={`${client.name} logo`}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  
+                  <h3 className="font-semibold text-sm sm:text-base text-foreground mb-2 leading-tight">
+                    {client.name}
+                  </h3>
+                  
+                  <Badge 
+                    variant="outline" 
+                    className={`text-xs mb-3 ${getCategoryColor(client.category)}`}
+                  >
+                    {client.category}
+                  </Badge>
+                  
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                    {client.description}
+                  </p>
                 </div>
-              </div>
-              
-              <h3 className="font-semibold text-sm sm:text-base text-foreground mb-2 leading-tight">
-                {client.name}
-              </h3>
-              
-              <Badge 
-                variant="outline" 
-                className={`text-xs mb-3 ${getCategoryColor(client.category)}`}
-              >
-                {client.category}
-              </Badge>
-              
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                {client.description}
-              </p>
-            </div>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
 
         {/* Stats Summary */}
         <div className="mt-16 bg-gradient-to-r from-primary/5 to-forest-dark/5 rounded-2xl p-6 sm:p-8 border border-primary/20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-primary mb-2">50+</div>
-              <div className="text-sm text-muted-foreground">Satisfied Clients</div>
+              <div className="text-2xl sm:text-3xl font-bold text-primary mb-2">30+</div>
+              <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
             <div>
               <div className="text-2xl sm:text-3xl font-bold text-primary mb-2">15+</div>
@@ -134,7 +143,7 @@ const Clients = () => {
             </div>
             <div>
               <div className="text-2xl sm:text-3xl font-bold text-primary mb-2">100+</div>
-              <div className="text-sm text-muted-foreground">Agricultural Sites</div>
+              <div className="text-sm text-muted-foreground">Projects Completed</div>
             </div>
           </div>
         </div>
