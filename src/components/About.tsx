@@ -72,10 +72,39 @@ const About = () => {
                 </p>
               </CardContent>
             </Card>
-          </div>
+        </div>
         </div>
 
-        <div className="mt-16">
+        {/* ISO Certification */}
+        <div className="mt-12">
+          <Card className="bg-gradient-to-br from-gold/10 to-primary/5 border-gold/30 shadow-card overflow-hidden">
+            <CardContent className="p-8">
+              <div className="flex flex-col lg:flex-row items-center gap-8">
+                <div className="flex-shrink-0">
+                  <div className="w-28 h-28 bg-gradient-to-br from-gold to-gold/70 rounded-full flex items-center justify-center shadow-lg">
+                    <div className="text-center text-background">
+                      <div className="text-xs font-bold">ISO</div>
+                      <div className="text-xl font-bold">9001</div>
+                      <div className="text-xs">2015</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex-1 text-center lg:text-left">
+                  <Badge className="mb-3 bg-gold/20 text-gold border-gold/30">ISO Certified Company</Badge>
+                  <h3 className="text-xl font-bold text-foreground mb-2">Quality Management Systems Certified</h3>
+                  <p className="text-muted-foreground text-sm mb-3">
+                    Assessed by RAPL and certified to comply with <strong className="text-primary">ISO 9001:2015</strong> standards for:
+                  </p>
+                  <p className="text-sm text-foreground/80 italic">
+                    "PWD Civil Contractor for Designing, Preparation of Projects, Supply, Installation, Testing and Commissioning of Solar Electric Fencing System"
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="mt-12">
           <Card className="bg-gradient-to-r from-primary/5 to-forest-light/30 border-primary/20">
             <CardContent className="p-8">
               <div className="grid md:grid-cols-3 gap-8 text-center">
