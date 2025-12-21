@@ -15,14 +15,14 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
-          <div className="flex items-center gap-4">
-            <div className="text-2xl font-bold text-primary">
+          <div className="flex items-center gap-2 sm:gap-4">
+            <div className="text-lg sm:text-xl lg:text-2xl font-bold text-primary whitespace-nowrap">
               United Fence Systems
             </div>
-            <Badge variant="outline" className="text-xs text-gold border-gold">
+            <Badge variant="outline" className="hidden sm:flex text-xs text-gold border-gold">
               Est. 1996
             </Badge>
           </div>

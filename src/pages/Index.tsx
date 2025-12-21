@@ -5,11 +5,13 @@ import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
+      <WhatsAppButton />
       
       <main>
         <section id="hero">
@@ -39,12 +41,12 @@ const Index = () => {
       
       <footer className="bg-forest-dark text-white py-12">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">United Fence Systems</h3>
+              <h3 className="text-xl lg:text-2xl font-bold mb-4">United Fence Systems</h3>
               <p className="text-white/80 text-sm mb-4">
                 30 years of excellence in electric fencing solutions. 
-                Protecting wildlife and securing properties across South India and other states as needed.
+                Protecting wildlife and securing properties across South India.
               </p>
               <div className="space-y-1 text-xs text-white/70">
                 <p className="font-medium text-white/90 mb-2">Business Address:</p>
