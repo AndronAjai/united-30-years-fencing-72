@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
 
 // Import logos
 import keralaGovLogo from "@/assets/logos/kerala-government.png";
@@ -12,9 +11,7 @@ import periyarLogo from "@/assets/logos/periyar-tiger-reserve.png";
 import tnForestLogo from "@/assets/logos/tn-forest-dept.png";
 
 const Clients = () => {
-  const plugin = useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true })
-  );
+  const plugin = Autoplay({ delay: 3000, stopOnInteraction: true });
   
   const clients = [
     {
@@ -88,10 +85,10 @@ const Clients = () => {
 
         {/* Clients Carousel */}
         <Carousel
-          plugins={[plugin.current]}
+          plugins={[plugin]}
           className="w-full max-w-6xl mx-auto"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
+          onMouseEnter={() => plugin.stop()}
+          onMouseLeave={() => plugin.reset()}
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {clients.map((client, index) => (
