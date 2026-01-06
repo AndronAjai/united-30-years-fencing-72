@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
 
 // Import logos
 import keralaGovLogo from "@/assets/logos/kerala-government.png";
@@ -11,7 +11,20 @@ import periyarLogo from "@/assets/logos/periyar-tiger-reserve.png";
 import tnForestLogo from "@/assets/logos/tn-forest-dept.png";
 
 const Clients = () => {
-  const plugin = Autoplay({ delay: 3000, stopOnInteraction: true });
+  const [api, setApi] = useState<CarouselApi>();
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (!api) return;
+
+    const interval = setInterval(() => {
+      if (!isHovered) {
+        api.scrollNext();
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [api, isHovered]);
   
   const clients = [
     {
@@ -85,10 +98,10 @@ const Clients = () => {
 
         {/* Clients Carousel */}
         <Carousel
-          plugins={[plugin]}
+          setApi={setApi}
           className="w-full max-w-6xl mx-auto"
-          onMouseEnter={() => plugin.stop()}
-          onMouseLeave={() => plugin.reset()}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {clients.map((client, index) => (
