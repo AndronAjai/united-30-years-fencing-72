@@ -7,63 +7,10 @@ import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-import { Helmet } from "react-helmet-async";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Helmet>
-        <title>
-          United Fence Systems | Electric Fencing Experts in South India
-        </title>
-
-        <meta
-          name="description"
-          content="India’s trusted electric fencing company since 1996. Wildlife-safe, ISO certified fencing solutions across Kerala, Tamil Nadu & Karnataka."
-        />
-
-        <meta
-          name="keywords"
-          content="electric fencing India, wildlife fencing Kerala, solar electric fencing, elephant fencing, government fencing contractor, United Fence Systems"
-        />
-
-        <link rel="canonical" href="https://united-fencing.vercel.app/" />
-
-        <meta name="robots" content="index, follow" />
-
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="United Fence Systems | 30 Years of Electric Fencing Excellence"
-        />
-        <meta
-          property="og:description"
-          content="Protecting wildlife, securing properties, and safeguarding communities with ISO-certified electric fencing solutions across South India."
-        />
-        <meta property="og:url" content="https://united-fencing.vercel.app/" />
-        <meta
-          property="og:image"
-          content="https://united-fencing.vercel.app/og-image.png"
-        />
-        <meta property="og:site_name" content="United Fence Systems" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="United Fence Systems | Electric Fencing Experts"
-        />
-        <meta
-          name="twitter:description"
-          content="ISO-certified electric fencing solutions for wildlife sanctuaries, agriculture and government projects across South India."
-        />
-        <meta
-          name="twitter:image"
-          content="https://united-fencing.vercel.app/og-image.png"
-        />
-        
-      </Helmet>
 
       <Header />
       <WhatsAppButton />
