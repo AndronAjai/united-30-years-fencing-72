@@ -5,9 +5,9 @@ import { useRef } from "react";
 
 // Import logos
 import keralaGovLogo from "@/assets/logos/kerala-government.png";
-import nddbLogo from "@/assets/logos/nddb-logo.png";
+import nddbLogo from "@/assets/logos/National_Dairy_Development_Board.gif";
 import bsnlLogo from "@/assets/logos/bsnl-logo.png";
-import kfdcLogo from "@/assets/logos/kfdc-logo.png";
+import kfdcLogo from "@/assets/logos/KFDC.png";
 import periyarLogo from "@/assets/logos/periyar-tiger-reserve.png";
 import tnForestLogo from "@/assets/logos/tn-forest-dept.png";
 
@@ -98,7 +98,7 @@ const Clients = () => {
               <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                 <div className="bg-card border border-border rounded-lg p-4 sm:p-6 hover:shadow-card transition-all duration-300 hover:scale-105 text-center h-full">
                   {/* Logo */}
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 rounded-lg overflow-hidden bg-white/50 backdrop-blur-sm flex items-center justify-center p-2">
+                  <div className="w-22 h-22 sm:w-22 sm:h-22 mx-auto mb-4 rounded-lg overflow-hidden bg-white/50 backdrop-blur-sm flex items-center justify-center p-2">
                     <img 
                       src={client.logo} 
                       alt={`${client.name} logo`}

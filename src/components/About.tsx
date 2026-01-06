@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import isoLogo from "@/assets/logos/iso-9001-2015.png";
+import isoLogo from "@/assets/logos/ISO-logo.png";
 
 const About = () => {
   return (

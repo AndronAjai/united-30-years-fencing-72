@@ -2,6 +2,14 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-electric-fencing.jpg";
 
 const Hero = () => {
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -33,10 +41,10 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 px-4 sm:px-0">
-              <Button size="lg" variant="hero" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
+              <Button onClick={() => scrollToSection('contact')} size="lg" variant="hero" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
                 Get Quote Today
               </Button>
-              <Button size="lg" variant="outline-gold" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
+              <Button onClick={() => scrollToSection('projects')} size="lg" variant="outline-gold" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
                 View Our Projects
               </Button>
             </div>
