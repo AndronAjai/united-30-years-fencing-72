@@ -179,7 +179,7 @@ const Projects = () => {
             >
               <span className="hidden sm:inline">{category.name}</span>
               <span className="sm:hidden">{category.name.split(' ')[0]}</span>
-              <Badge variant="outline" className="text-xs">
+              <Badge variant={activeCategory === category.id ? "default" : "outline"} className="text-xs">
                 {category.count}
               </Badge>
             </Button>

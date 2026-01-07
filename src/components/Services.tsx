@@ -88,7 +88,7 @@ const Services = () => {
                       </div>
                     ))}
                   </div>
-                  <Button variant="professional" className="w-full mt-4">
+                  <Button variant="professional" className="w-full mt-4" onClick={() => scrollToContact()}>
                     Learn More
                   </Button>
                 </CardContent>

@@ -357,7 +357,8 @@ const Contact = () => {
               <Button
                 variant="hero"
                 size="lg"
-                className="bg-gold hover:bg-gold/90 text-forest-dark"
+                className="bg-gold hover:bg-gold/90 text-white"
+                
                 onClick={() => window.open("tel:+919447022577", "_self")}
               >
                 Call Emergency Helpline: +91 9447022577
