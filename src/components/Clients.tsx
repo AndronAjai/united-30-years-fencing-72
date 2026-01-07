@@ -108,7 +108,7 @@ const Clients = () => {
               <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                 <div className="bg-card border border-border rounded-lg p-4 sm:p-6 hover:shadow-card transition-all duration-300 hover:scale-105 text-center h-full">
                   {/* Logo */}
-                  <div className="w-22 h-22 sm:w-22 sm:h-22 mx-auto mb-4 rounded-lg overflow-hidden bg-white/50 backdrop-blur-sm flex items-center justify-center p-2">
+                  <div className="w-20 h-20 sm:w-22 sm:h-22 mx-auto mb-4 rounded-lg overflow-hidden bg-white/50 backdrop-blur-sm flex items-center justify-center p-2">
                     <img 
                       src={client.logo} 
                       alt={`${client.name} logo`}
