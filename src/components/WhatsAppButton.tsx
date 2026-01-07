@@ -3,7 +3,7 @@ import whatsappLogo from "@/assets/logos/whatasapp-logo.png";
 // import whatsappLogo from "@/assets/logos/whatsapp-logo.png";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "919447022577";
+  const phoneNumber = "+919446597577";
   const message =
     "Hello, I am interested in your electric fencing solutions. Please provide more information.";
 

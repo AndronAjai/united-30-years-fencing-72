@@ -307,7 +307,23 @@ const Contact = () => {
                     <div className="min-w-0">
                       <p className="text-xs sm:text-sm font-medium">Phone</p>
                       <p className="text-muted-foreground text-xs sm:text-sm">
-                        +91 9447022577, +91 8075684443
+                        <span
+                          className="cursor-pointer"
+                          onClick={() =>
+                            window.open("tel:+919447022577", "_self")
+                          }
+                        >
+                          +91 9447022577
+                        </span>
+                        ,{" "}
+                        <span
+                          className="cursor-pointer"
+                          onClick={() =>
+                            window.open("tel:+918075684443", "_self")
+                          }
+                        >
+                          +91 8075684443
+                        </span>
                       </p>
                     </div>
                   </div>
@@ -318,9 +334,13 @@ const Contact = () => {
                     </div>
                     <div className="min-w-0">
                       <p className="text-xs sm:text-sm font-medium">Email</p>
-                      <p className="text-muted-foreground text-xs sm:text-sm truncate">
+
+                      <a
+                        href="mailto:unitedfencesystems@gmail.com"
+                        className="text-muted-foreground text-xs sm:text-sm truncate cursor-pointer hover:underline"
+                      >
                         unitedfencesystems@gmail.com
-                      </p>
+                      </a>
                     </div>
                   </div>
 
@@ -358,7 +378,6 @@ const Contact = () => {
                 variant="hero"
                 size="lg"
                 className="bg-gold hover:bg-gold/90 text-white"
-                
                 onClick={() => window.open("tel:+919447022577", "_self")}
               >
                 Call Emergency Helpline: +91 9447022577

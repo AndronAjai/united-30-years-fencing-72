@@ -69,13 +69,13 @@ const Index = () => {
               <div className="space-y-2 text-sm text-white/80">
                 <div>
                   <p className="font-medium text-white/90">Phone Numbers:</p>
-                  <p>+91 9447022577</p>
-                  <p>+91 8075684443</p>
-                  <p>+91 9446597577</p>
+                  <p className="cursor-pointer" onClick={() => window.open("tel:+919447022577", "_self")}>+91 9447022577</p>
+                  <p className="cursor-pointer" onClick={() => window.open("tel:+918075684443", "_self")}>+91 8075684443</p>
+                  <p className="cursor-pointer" onClick={() => window.open("tel:+919446597577", "_self")}>+91 9446597577</p>
                 </div>
                 <div className="mt-3">
                   <p className="font-medium text-white/90">Email:</p>
-                  <p>unitedfencesystems@gmail.com</p>
+                  <a className="cursor-pointer" onClick={() => window.open("mailto:unitedfencesystems@gmail.com", "_self")}>unitedfencesystems@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -103,8 +103,8 @@ const Index = () => {
 
           <div className="border-t border-white/20 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-white/60">
-              © 2024 United Fence Systems. All rights reserved. Established
-              1994.
+              © 2026 United Fence Systems. All rights reserved. Established
+              1996.
             </p>
             <p className="text-sm text-white/60">
               Authorized Dealer: Fenceline Gallagher (New Zealand)

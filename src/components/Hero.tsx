@@ -26,7 +26,7 @@ const Hero = () => {
           <div className="text-white">
             {/* Established Badge */}
             <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-gold/20 backdrop-blur-sm border border-gold/30 rounded-full mb-4 sm:mb-6 text-sm sm:text-base">
-              <span className="text-gold font-semibold">Est. 1994</span>
+              <span className="text-gold font-semibold">Est. 1996</span>
               <span className="mx-2 sm:mx-3 text-gold/60">•</span>
               <span className="text-gold font-semibold">30 Years of Excellence</span>
             </div>
